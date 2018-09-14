@@ -1,11 +1,12 @@
-package main
+package helloworld
 
 import (
 	"github.com/gin-gonic/gin"
 	"net/http"
+	"testing"
 )
 
-func main() {
+func Test_helloworld(t *testing.T)  {
 	router := gin.Default()
 
 	router.GET("/", func(context *gin.Context) {
@@ -14,4 +15,5 @@ func main() {
 
 	router.Run(":8080")
 }
+
 
